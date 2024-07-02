@@ -22,13 +22,13 @@ function updateImageSource() {
         image.src = './static/mobile_habte.jpg';
     }
 
-    image.onload = () => {
-        const { naturalWidth, naturalHeight, width, height } = image;
-        console.log("Natural width:", naturalWidth);
-        console.log("Natural height:", naturalHeight);
-        console.log("Display width:", width);
-        console.log("Display height:", height);
-    };
+    // image.onload = () => {
+    //     const { naturalWidth, naturalHeight, width, height } = image;
+    //     console.log("Natural width:", naturalWidth);
+    //     console.log("Natural height:", naturalHeight);
+    //     console.log("Display width:", width);
+    //     console.log("Display height:", height);
+    // };
 }
 
 window.addEventListener('resize', updateImageSource);
