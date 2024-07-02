@@ -1,29 +1,127 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+h1, h2, p {
     margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.detail-container {
+    border-radius: 10px;
+    padding: 0 20px;
+
+}
+
+.profile h1 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+.goals {
+    padding-right: 30px;
+}
+
+p, ul {
+    font-size: 1rem;
+}
+
+ul.goal {
+    /* list-style-type: none; */
     padding: 0;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+ul.goal li {
+    margin: 10px 0;
 }
 
-main {
-    padding: 1em;
+.links ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-img[data-testid="slackProfilePicture"] {
-    display: block;
-    margin: 0 auto;
-    width: auto;
-    height: auto;
+.links ul li {
+    margin: 10px 0;
 }
 
-@media (max-width: 600px) {
-    body {
-        padding: 0 1em;
+.links a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.hr {
+    width: 90%;
+    height: 1px;
+    background-color: #333;
+    margin-block: 15px;
+}
+
+/* Responsive Styles */
+@media (min-width: 500px) {
+    .container {
+        flex-direction: column;
     }
+
+}
+
+@media (min-width: 1000px) {
+    body {
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* margin: 10px; */
+    }
+
+    .image-container {
+        align-self: center;
+    }
+
+    .image-container, .detail-container {
+        flex: 1;
+        margin: 10px;
+    }
+}
+
+
+[data-testid="currentTimeUTC"], [data-testid="currentDay"], [data-testid="slackEmail"] {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+[data-testid="hngLink"], [data-testid="keywordLink"], [data-testid="scrapeanywebLink"] {
+    font-size: 1.1rem;
+    font-weight: bold;
 }
